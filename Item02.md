@@ -8,7 +8,7 @@
 적 생성자 패턴(telescoping constructor pattern)은 아래 코드와 같이 필수 매개변수만 받는 생성자, 필수 매개변수와 선택 매개변수 1개를 받는 생성자, 
 필수 매개변수와 선택 매개변수 2개를 받는 생성자, ... 형태로 선택 매개변수를 전부 받는 생성자까지 늘려가는 방식이다.
 <details>
-<summary></summary>
+<summary>예시</summary>
 <div markdown="1">
   
 ```
@@ -58,7 +58,7 @@ public class NutritionFacts {//분량상 매개변수가 4개까지 늘어난 �
 ### 자바빈즈패턴
 자바빈즈 패턴(JavaBeans pattern)은 매개변수가 없는 생성자로 객체를 만든 후, 세터(setter) 메서드들을 호출해 원하는 매개변수의 값을 설정하는 방식이다.
 <details>
-<summary></summary>
+<summary>예시</summary>
 <div markdown="1">
   
 ```
@@ -164,7 +164,7 @@ public class NutritionFacts {
 구체 빌더를 갖게 한다.
 
 <details>
-<summary></summary>
+<summary>예시</summary>
 <div markdown="1">
 다음은 피자의 다양한 종류를 표현하는 계층구조의 루트에 놓인 추상 클래스이다
 
