@@ -17,10 +17,10 @@
 
 ```java
 public class Elvis {
-	public static final Elvis INSTANCE = new Elvis();
-  private Elvis() {...}
+   public static final Elvis INSTANCE = new Elvis();
+   private Elvis() {...}
     
-  public void leaveTheBuilding() {...}
+   public void leaveTheBuilding() {...}
 }
 
 ```
@@ -42,7 +42,7 @@ reflect의 Field 와 Method 객체를 받아서 setAccessible를 설정해주면
 >
 ```java
 public class Elvis {
-	  private static final Elvis INSTANCE = new Elvis();
+    private static final Elvis INSTANCE = new Elvis();
     private Elvis() {...}
     public static Elvis getInstance() { return INSTANCE; }
     
