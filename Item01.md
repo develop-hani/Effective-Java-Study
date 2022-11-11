@@ -12,7 +12,7 @@
 이와 다르게 정적 팩터리 메서드는 이름을 어떻게 짓느냐에 따라 객체의 특성을 쉽게 묘사할 수 있다.
 > 생성자 BigInteger(int , int , Random )과 정적 팩터리 메서드 BigInteger.probablePrime 중 어느 쪽이 '값이 소수인 BigInteger를 반환한다'라는 의미를 전달하는데 효과적인가
 하나의 시그니처로는 하나의 생성자만 만들수 있는데 반해 이름을 가질 수 있는 정적 팩터리 메서드에는 이런 제약이 없다.
-<pre><code>
+```java
 class Client{
     String name;
     String id;
@@ -25,11 +25,11 @@ class Client{
         this.id = id;
     }
 }
-</code></pre>
+```
 위 코드는 String 변수 하나를 매개변수로 받는 생성자가 두개 존재하게 되어 오류가 발생한다.
 
 이런경우 아래와 같이 정적 팩터리 메서드를 활용할 수 있다.
-```
+```java
 class Client{
     String name;
     String id;
@@ -51,7 +51,7 @@ class Client{
 -
 불변 클래스(아이템 17) 또는 같은 객체가 자주 요청되는 상황에서 불필요한 객체 생성을 피할 수 있다.
 대표적인 예로 Boolean.valueOf(boolean)은 객체를 아예 생성하지 않는다.
-```
+```java
 public static Boolean valueOf(boolean b){
     return b ? Boolean.TRUE : Boolean FALSE;
 }
