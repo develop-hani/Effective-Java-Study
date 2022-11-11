@@ -11,7 +11,7 @@
 <summary></summary>
 <div markdown="1">
   
-```
+```java
 public class NutritionFacts {//분량상 매개변수가 4개까지 늘어난 코드이다.
 
     private final int servingSize; // （ml, 1회 제공량） 필수
@@ -61,7 +61,7 @@ public class NutritionFacts {//분량상 매개변수가 4개까지 늘어난 �
 <summary></summary>
 <div markdown="1">
   
-```
+```java
 public class NutritionFacts {
     // 매개변수들은 (기본값이 있다면) 기본값으로 초기화된다.
     private int servingSize = -1; // 필수; 기본값 없음
@@ -82,7 +82,7 @@ public class NutritionFacts {
 }
 ```
   
-```
+```java
 NutritionFacts cocaCola = new NutritionFactsO;
 cocaCola.setSe rvingSize(240);
 cocaCola.setServings(8);
@@ -102,7 +102,7 @@ cocaCola.setCarbohydrate(27);
 빌더 패턴(Builder pattern)은 점층적 생성자 패턴의 안정성과 자바빈즈 패턴의 가독성을 겸비하였다. 클라이언트는 필요한 객체를 직접 만드는 대신, 필수 매개변수만으로 
 생성자(혹은 정적 패터리)를 호출해 빌더 객체를 얻은 후 빌더 객체가 제공하는 일종의 세터 메서드들로 원하는 선택 매개변수들을 설정한다. 그리고 매개변수가 없는 build 메서드를 호출해 
 우리에게 필요한 객체를 얻는다.
-```
+```java
 public class NutritionFacts {
     private final int servingSize;
     private final int servings;
@@ -168,7 +168,7 @@ public class NutritionFacts {
 <div markdown="1">
 다음은 피자의 다양한 종류를 표현하는 계층구조의 루트에 놓인 추상 클래스이다
 
-```
+```java
 public abstract class Pizza {
     public enum Topping { HAM, MUSHROOM, ONION, PEPPER, SAUSAGE }
     final Set<Topping> toppings;
@@ -195,7 +195,7 @@ Pizza.Builder 클래스는 재귀적 타입 한정(아이템 30)을 이용하는
 
 아래는 Pizza의 하위 클래스 두개이다.
 
-```
+```java
 public class NyPizza extends Pizza {//크기 매개변수를 필수
     public enum Size { SMALL, MEDIUM, LARGE }
     private final Size size;
@@ -217,7 +217,7 @@ public class NyPizza extends Pizza {//크기 매개변수를 필수
 }
 ```
 
-```
+```java
 public class Calzone extends Pizza {//소스를 안에 넣을지 선택 하는 매개변수 필수
     private final boolean sauceinside;
     public static class Builder extends Pizza.Builder<Builder> {
