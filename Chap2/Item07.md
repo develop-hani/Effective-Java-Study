@@ -1,4 +1,5 @@
-# 1. 메모리 누수의 주범
+# [Item 07] 다 쓴 객체 참조를 해제하라
+## 1. 메모리 누수의 주범
 
 ### 1) 스택(Stack)과 같이 자기 자신의 자원을 관리하는 클래스
 
@@ -16,7 +17,7 @@
             elements = new Object[DEFAULT_INITIAL_CAPACITY];
         }
     
-        **public Object pop()** { // 스택이 줄어들 때 꺼내진 객체를 GC가 회수하지 않는다.
+        public Object pop() { // 스택이 줄어들 때 꺼내진 객체를 GC가 회수하지 않는다.
             if (size == 0)
                 throw new EmptyStackException();
             return elements[--size];
@@ -34,7 +35,7 @@
         if (size == 0)
             throw new EmptyStackException();
         Object result = elements[--size];
-        **elements[size] = null;** // 다 쓴 참조 해제
+        elements[size] = null; // 다 쓴 참조 해제
         return result;
     }
     ```
