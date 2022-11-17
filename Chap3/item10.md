@@ -135,7 +135,7 @@ public class ColorPoint extends Point {
         return super.equals(o) && ((ColorPoint) o).color == color;
     }
 }
-'''
+```
   
 </details>
 
@@ -151,7 +151,7 @@ public boolean equals(Object o) {
     	return o.equals(this);
         
     return super.equals(o) && ((ColorPoint) o).color == color;
-
+}
 ```
 
 ```java
