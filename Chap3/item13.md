@@ -74,7 +74,7 @@ public class Example {
     }
     
     System.out.println("stu1의 이름 : " + stu1.getName());
-    System.out.println("stu1의 이름 : " + stu1.getName());
+    System.out.println("stu2의 이름 : " + stu2.getName());
   }
 }
 
