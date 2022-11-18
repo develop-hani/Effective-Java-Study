@@ -2,9 +2,13 @@
 
 ### toString()
 
+모든 클래스의 가장 최상위 클래스는 Object클래스이다. Object 클래스가 가진 메소드 중 하나로 toString이 있다. 이 메서드는 객체가 가지고 있는 정보나 값들을 문자열로 만들어 리턴하는 메서드이다.
+
 Object에서 정의한 toString()을 재정의하고 사용하지 않으면 `클래스 이름@16진수`로 표현한 해시코드 포맷으로 반환된다. toString의 규약에 따르면 간결하면서 사람이 읽기 쉬운 형태의 유익한 정보를 반환해야 한다.
 
 equals나 hashCode처럼 시스템에 오작동을 일으키지는 않지만, item 12 규칙이 주는 개발상의 편의는 막대하므로 중요하다. 해당 객체를 사용하기에도, 디버깅하기에도 즐겁다.
+
+String 객체에서 toString은 자신의 값 그대로를 리턴하고, File 객체에서 toString은 자신이 해당 경로값을 리턴한다.
 
 ``` java
 System.out.println(phoneNumber);
@@ -73,7 +77,37 @@ PhoneNubmer newNumber = PhoneNumber.of("123-123-1234");
  */
 @Override public String toString() { ... }
 ```
+``` java
+public class Human {
+
+	private int Age;
+	
+	public void setAge(int age) {
+		Age = age;
+	}
+	
+	@Override
+	public public String toString(){
+		return "나이는 : " + Age;
+	}
+}
+///실행하는 부분
+public class Example {
+	public static void main(String[] args){
+	
+		Human hu = new Human();
+		hu.setAge(31);
+		
+		System.out.println(hu.toString());
+	}
+}
+```
+toString 메서드는 자동으로 호출되기도 하는데,
+
+위의 `Human` 예제에서 toString 메소드를 지우더라도 System.out.println(hu); 해도 잘 나온다.
 
 #### 3. toString이 반환한 값에 포함된 정보를 얻어올 수 있는 API를 제공하자
 
 - 그렇지 않으면 이 객체를 사용하는 프로그래머가 불필요한 parsing 작업을 해야한다. 접근자를 제공하지 않으면, toString 의 포맷이 사실상 준-표준 API처럼 동작하게 된다.
+
+
