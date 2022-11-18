@@ -50,8 +50,8 @@ public int hashCode() { return 42; }
     		c. 배열 필드
     		- 각각을 핵심 원소처럼 다룬다.
     		- 원소가 하나도 없다면 0 사용
- 		- 모든 원소가 핵심 원소라면 Arrays.hashCode 사용 
- 		
+ 			- 모든 원소가 핵심 원소라면 Arrays.hashCode 사용
+ 
 	2. 단계 2.1에서 계산한 해시코드 c로 result를 갱신
     	ex) result = 31 * result + c;
         
