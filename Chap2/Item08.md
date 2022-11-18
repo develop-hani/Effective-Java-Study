@@ -42,7 +42,7 @@ cleaner 또한 클래스의 모든 인스턴스를 수거하는 형태로 사용
 
 ------
 ## finalizer와 cleaner의 대안은 뭐가 있을까?
-AutoCloseable을 구현해주고 클라이언트에서 인스턴스를 다 쓰고 나면 close 메서드를 호출하면 된다.(일반적으로 예외가 발생해도 종료되도록 try-with-resources(아이템 9)를 사용한다.)\
+AutoCloseable을 구현해주고 클라이언트에서 인스턴스를 다 쓰고 나면 close 메서드를 호출하면 된다.(일반적으로 예외가 발생해도 종료되도록 try-with-resources(아이템 9)를 사용한다.)
 >close 메서드에서 이 객체는 더 이상 유효하지 않음을 필드에 기록하고, 다른 메서드가 이 필드를 검사해 객체가 닫힌 후 불렸다면 IllegalStateException을 던지게 하는 식으로 각 인스턴스는 자신이 닫혔는지 추적하도록 하는 것이 좋다,
 ## finalizer와 cleaner 쓸데가 있긴 할까?
 ### 자원의 소유자가 close 메서드를 호출하지 않는 것에 대비한 안전망 역할
