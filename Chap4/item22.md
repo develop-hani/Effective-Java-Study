@@ -6,6 +6,21 @@
 
 > 상수 인터페이스: 메서드 없이, 상수를 뜻하는 static final 필드로만 가득 찬 인터페이스
 
+```java
+// 상수 인터페이스 안티 패턴 - 사용금지!
+public interface PhysicalConstants {
+  // 아보가드로 수 (1/몰)
+  static final double AVOGADROS_NUMBER = 6.022_140_857e23;
+  
+  // 볼츠만 상수 (J/K)
+  static final double BOLTZMANN_CONSTANT = 1.380_648_52e-23;
+  
+  // 전자 질량 (kg)
+  static final double ELECTRON_MASS = 9.109_383_56e-31;
+
+}
+```
+
 **상수 인터페이스 안티패턴은 인터페이스를 잘못 사용한 예다.**<br>
 - 상수 인터페이스를 구현하는 것은 내부 구현을 클래스의 API로 노출하는 행위다.<br>
 - 오히려 클라이언트 코드가 내부 구현에 해당하는 상수들에 종속되게 한다.<br>
