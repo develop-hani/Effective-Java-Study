@@ -34,10 +34,10 @@
 |16. public 클래스에서는 public 필드가 아닌 접근자 메서드를 사용하라|박예한|2022.11.30||
 |[17. 변경 가능성을 최소화하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap4/item17.md)|황동현|2022.11.30|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/9)|
 |[18. 상속보다는 컴포지션을 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap4/item18.md)|황동현|2022.11.30||
-|19. 상속을 고려해 설계하고 문서화하라. 그러지 않았다면 상속을 금지하라|이채영|2022.11.30||
-|20. 추상 클래스보다는 인터페이스를 우선하라|이채영|2022.11.30||
-|21. 인터페이스는 구현하는 쪽을 생각해 설계하라|전현민|2022.11.30||
-|22. 인터페이스는 타입을 정의하는 용도로만 사용하라|전현민|2022.11.30||
+|[19. 상속을 고려해 설계하고 문서화하라. 그러지 않았다면 상속을 금지하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap4/item19.md)|이채영|2022.11.30||
+|[20. 추상 클래스보다는 인터페이스를 우선하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap4/item20.md)|이채영|2022.11.30||
+|21. 인터페이스는 구현하는 쪽을 생각해 설계하라|전현민|2022.11.30|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/11)|
+|22. 인터페이스는 타입을 정의하는 용도로만 사용하라|전현민|2022.11.30|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/12)|
 |23. 태그 달린 클래스보다는 클래스 계층구조를 활용하라||||
 |24. 멤버 클래스는 되도록 static으로 만들라||||
 |25. 톱레벨 클래스는 한 파일에 하나만 담으라||||
