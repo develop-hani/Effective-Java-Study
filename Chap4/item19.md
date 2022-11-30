@@ -1,6 +1,6 @@
 ## CH4 클래스와 인터페이스
->   _추상화의 기본 단위인 클래스와 인터페이스는 자바 언어의 심장과도 같다. 
->   자바 언어의 클래스와 인터페이스 설계에 사용하는 강력한 요소를 적절히 활용하여 쓰기 편하고, 견고하며, 유연한 클래스와 인터페이스 만드는 방법을 안내한다._
+> +  _추상화의 기본 단위인 클래스와 인터페이스는 자바 언어의 심장과도 같다_
++ _자바 언어의 클래스와 인터페이스 설계에 사용하는 강력한 요소를 적절히 활용하여 쓰기 편하고, 견고하며, 유연한 클래스와 인터페이스 만드는 방법을 안내한다_
 
 ### 아이템 19. 상속을 고려해 설계하고 문서화하라. 그러지 않았다면 상속을 금지하라
 
@@ -24,61 +24,125 @@ API 문서의 메서드 설명에서 `Implementation Requirements` 라는 절이
 ### hook을 만들기
 
 효율적인 하위 클래스를 만들 수 있게 하려면 클래스 내부 동작 과정에 끼어들 수 있는 훅(hook) 메서드를 잘 선별하여 protected 메서드 형태로 공개해야 할 수도 있다.
-`java.util.AbstractList` 	`removeRange`
-> `protected void removeRange(int fromIndex, int toIndex)`
-`fromIndex(포함)`부터 `toIndex(미포함)`까지의 모든 원소를 이 리스트에서 제거한다.
-이 리스트 혹은 이 리스트의 부분리스트에 정의된 clear연산이 이 메서드를 호추한다. 리스트 구현의 내부 구조를 활용하도록 이 메서드를 재정의하면 이 리스트와 부분리스트의 clear연산 성능을 크게 개선할 수 있다.
-`Implementation Requirements`:이 메서드는 `fromIndex`에서 시작하는 리스트의 반복자를 얻어 모든 원소를 제거할 때까지 `ListIterator.next`와 `ListIterator.remove`를 반복 호출하도록 구현되어 있다. 
-`Parameters`:
-`fromeIndex` `toIndex`
+![](https://velog.velcdn.com/images/lcy923/post/bc204024-0fca-411d-a8ec-f23e71e330aa/image.png)
 
-List 구현체의 최종 사용자느 `removeRange` 메서드에 관심이 없음에도 단지 하위 클래스에서 부분리스트의 clear 메서드를 고성능으로 만들기 쉽게 하려고 제공했다.
+표시된 주석을 보면 `removeRange` 메서드는 이 리스트 또는 부분 리스트의 `clear` 메서드에서 호출한다고 나와있다. 또한 리스트 구현의 내부 구조의 이점을 잘 활용하여 `removeRange` 메서드를 재정의하면 이 리스트 또는 부분 리스트의 `clear` 메서드 성능을 향상 시킬 수 있다 라고 나와있다. 
 
-protected 메서드와 필드는 공개 API이기 때문에 영원히 책임져야 한다. 그러므로 상속용으로 설계한 클래스는 배포 전에 반드시 하위 클래스를 만들어 검증해보자.
+이 메서드를 제공한 이유는 단지 하위 클래스에서 부분리스트의 `clear` 메서드를 고성능으로 만들기 쉽게 하기 위해서이다. 
+
+protected 메서드와 필드는 공개 API이기 때문에 영원히 책임져야 한다. 상속용 클래스를 시험하는 방법은 직접 하위 클래스를 만들어보는 것이 유일하다. 또한 상속용 클래스는 배포 전에 반드시 하위 클래스를 만들어 검증해야한다. 놓친 `protected` 멤버는 검증 도중 빈자리가 확연히 드러날 것이고 반대로 여러 하위 클래스를 만들면서 전혀 쓰이지 않는 `protected` 멤버는 `private`이었야 할 가능성이 크다.
 
 ### 상속용 클래스의 생성자는 재정의 가능한 메서드(non-private, non-final, non-static)를 호출하면 안 된다
 
-상위 클래스의 생성자가 하위 클래스의 생성자보다 먼저 실행되므로, 하위 클래스에서 재정의 해버린 메서드가 하위 클래스 생성자보다 먼저 호출된다. 이 때 하위 생성자에서 초기화 하는 값에 의존한다면 의도대로 동장하지 않을 것이다.
+상위 클래스의 생성자가 하위 클래스의 생성자보다 먼저 실행되므로, 하위 클래스에서 재정의 해버린 메서드가 하위 클래스 생성자보다 먼저 호출된다. 이 때 하위 생성자에서 초기화 하는 값에 의존한다면 의도대로 동작하지 않을 것이다.
 
 ``` java
 public class Super {
-// 잘못된 예-생성자가 재정의 가능 메서드를 호출
+	// 잘못된 예-생성자가 재정의 가능 메서드를 호출
 	public Super() {
 		overrideMe();
 	}
 	
 	public void overrideMe() {
+    	System.out.println("super method");
 	}
 }
-```
-`overrideMe 재정의, 상위 클래스 생성자가 호출해 오동작 일으키는 메서드`
-```java
+
+// overrideMe재정의, 상위 클래스 생성자가 호출해 오동작 일으키는 메서드
+
 public final class Sub extends Super {
 	// 초기화되지 않은 final 필드. 생성자에서 초기화
-	private final Instant instant;
-
-	Sub() {
-		instant = Instant.now();
-	}
+	private String str;
+    public Sub() {
+        str = "Sub String";
+    }
 
 	// 재정의 가능 메서드. 상위 클래스의 생성자가 호출
-	@Override public void overrideMe() {
-		System.out.println(instant);
-	}
+	@Override
+    public void overrideMe() {
+        System.out.println(str);
+    }
 
-	public static void main(String[] args) {
-		Sub sub = new Sub();
-		sub.overrideMe();
-	}
+    public static void main(String[] args) {
+        Sub sub = new Sub();
+    }
 }
 ```
-final 필드임에도 불구하고 출력 결과는 null, now이다! 상위 클래스의 생성자는 하위 클래스의 생성자가 인스턴스 필드를 초기화 하기 전에 메서드를 호출하기 때문이다. 이 프로그램에서는 final 필드의 상태가 두개이다.(원래는 하나여야 함)
+하위 클래스의 생성자 보다 상위 클래스의 생성자가 먼저 호출되는데, 상위 클래스의 생성자에서 하위 클래스의 재정의 된 메서드를 호출 하여 String 값이 초기화가 되기도 전에 접근하여 null이 출력이 되었다. 이와 같은 현상은 `Cloneable`의 `clone`과 `Serializable`의 `readObject`에서도 발생한다. 이는 두 메서드가 생성자와 비슷한 새로운 객체를 생성하는 효과를 가지기 때문이다. 
 
-### Cloneable과 Serializable 인터페이스는 상속용 설계를 어렵게 한다
+다음 코드는 상위 클래스의 `readObject`에서 재정의 가능한 메서드를 호출하는 코드이다.
+```java 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.Serializable;
 
-둘 중 하나라도 구현한 클래스를 상속할 수 있게 설계하는 것은 일반적으로 좋지 않은 생각이다. `clone`과 `readObejct` 메서드도 생성자 처럼 기능할 수 있기 때문에, 재정의한 메서드를 호출해서는 안 된다. 특히 `clone` 메서드는 원본 객체한테까지 피해을 줄 수 있으므로 조심해야 한다.
+public class SerializableFoo implements Serializable {
 
-`Serializable`을 구현한 상속용 클래스가 `readResolve`나 `writeReplace` 메서드를 갖는다면 반드시 protected 로 선언해야 한다.
+    private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException{
+        ois.defaultReadObject();
+        overrideMe();
+    }
+    public void overrideMe() {
+        System.out.println("This is SuperFoo's overrideMe");
+    }
+}
+
+public class SerializableSubFoo extends SerializableFoo {
+    String str;
+
+    public void setStr(String str) {
+        this.str = str;
+    }
+
+    @Override
+    public void overrideMe() {
+        System.out.println("This is SubFoo's overrideMe");
+        if (str == null) {
+            throw new NullPointerException();
+        }
+        System.out.println(str);
+    }
+}
+```
+``` java
+class SerializableSubFooTest {
+
+
+    @DisplayName("역직렬화시 readObject가 재정의된 메소드 호출")
+    @Test
+    void name() throws IOException, ClassNotFoundException{
+        SerializableSubFoo subFoo = new SerializableSubFoo();
+        subFoo.setStr("hi!!!!");
+
+        //직렬화
+        byte[] serializedFoo;
+        try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+            try (ObjectOutputStream oos = new ObjectOutputStream(baos)) {
+                oos.writeObject(subFoo);
+                serializedFoo = baos.toByteArray();
+            }
+        }
+
+        // 역직렬화
+        assertThatThrownBy(() -> {
+            byte[] deserializedMember = Base64.getDecoder().decode(Base64.getEncoder().encodeToString(serializedFoo));
+            try (ByteArrayInputStream bais = new ByteArrayInputStream(deserializedMember)) {
+                try (ObjectInputStream ois = new ObjectInputStream(bais)) {
+                    Object objectMember = ois.readObject();
+                    SerializableSubFoo deserialized = (SerializableSubFoo) objectMember;
+                    assertSame(deserialized,subFoo);
+                }
+            }
+        }).isInstanceOf(NullPointerException.class);
+    }
+}
+```
+
+하위 클래스를 역직렬화 할때 상위 클래스의 `readObject`가 호출될 때 하위 클래스의 `overrideMe` 메서드를 호출하여 `NullPointerException`을 던진다.
+
+`Cloneable`과 `Serializable` 인터페이스는 상속용 설계를 어렵게 한다. 둘 중 하나라도 구현한 클래스를 상속할 수 있게 설계하는 것은 일반적으로 좋지 않은 생각이다. `clone`과 `readObejct` 메서드도 생성자 처럼 기능할 수 있기 때문에, 재정의한 메서드를 호출해서는 안 된다. 특히 `clone` 메서드는 원본 객체한테까지 피해을 줄 수 있으므로 조심해야 한다.
+
+`Serializable`을 구현한 상속용 클래스가 `readResolve`나 `writeReplace` 메서드를 갖는다면 반드시 `protected` 로 선언해야 한다.
 
 ### 지켜야 할 원칙
 
@@ -87,3 +151,41 @@ final 필드임에도 불구하고 출력 결과는 null, now이다! 상위 클�
 상속을 통한 확장보다는, 핵심 기능을 정의한 인터페이스가 있고 클래스가 그 인터페이스를 구현하도록 하자. `List`, `Set`, `Map`이 좋은 사례이다.
 
 인터페이스를 구현하지 않은 구현체의 경우 이런 제약이 불편하기 때문에, 재정의 가능한 메서드를 줄이기 위해 자기사용하는 `public` 메서드를 `private` 메서드로 대체하자. 
+
+클래스의 동작을 유지하면서 재정의 가능 메서드를 사용하는 코드를 제거해야할 때는 `private` '도우미 메서드'를 만들어 재정의 가능 메서드의 기능을 옮기고 도우미 메서드를 호출하도록 수정한다. 
+
+```java
+
+public class Super {
+    public Super() {
+//      overrideMe();
+        helpMethod();
+    }
+
+    public void overrideMe() {
+        helpMethod();
+    }
+
+    //도우미 메서드
+    private void helpMethod() {
+        System.out.println("super method");
+    }
+}
+public class Sub extends Super{
+    private String str;
+    public Sub() {
+        str = "Sub String";
+    }
+
+    @Override
+    public void overrideMe() {
+        System.out.println(str);
+    }
+
+
+    public static void main(String[] args) {
+        Sub sub = new Sub();
+        sub.overrideMe();
+    }
+}
+```
