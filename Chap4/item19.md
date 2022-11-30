@@ -23,6 +23,10 @@ API 문서의 메서드 설명에서 `Implementation Requirements` 라는 절이
 
 ### hook을 만들기
 
+훅(갈고리 : hook) 메서드란?
+
+abstract 키워드를 붙이면 상속 받은 클래스는 반드시 해당 메서드를 구현해야 하지만 abstract 키워드를 붙이지 않고 훅 메서드로 만들면 반드시 구현할 필요가 없다. 상속 받은 클래스에서는 선택적으로 오버라이드할 수 있다.
+
 효율적인 하위 클래스를 만들 수 있게 하려면 클래스 내부 동작 과정에 끼어들 수 있는 훅(hook) 메서드를 잘 선별하여 protected 메서드 형태로 공개해야 할 수도 있다.
 
 ![](https://velog.velcdn.com/images/lcy923/post/bc204024-0fca-411d-a8ec-f23e71e330aa/image.png)
