@@ -24,6 +24,7 @@ API 문서의 메서드 설명에서 `Implementation Requirements` 라는 절이
 ### hook을 만들기
 
 효율적인 하위 클래스를 만들 수 있게 하려면 클래스 내부 동작 과정에 끼어들 수 있는 훅(hook) 메서드를 잘 선별하여 protected 메서드 형태로 공개해야 할 수도 있다.
+
 ![](https://velog.velcdn.com/images/lcy923/post/bc204024-0fca-411d-a8ec-f23e71e330aa/image.png)
 
 표시된 주석을 보면 `removeRange` 메서드는 이 리스트 또는 부분 리스트의 `clear` 메서드에서 호출한다고 나와있다. 또한 리스트 구현의 내부 구조의 이점을 잘 활용하여 `removeRange` 메서드를 재정의하면 이 리스트 또는 부분 리스트의 `clear` 메서드 성능을 향상 시킬 수 있다 라고 나와있다. 
