@@ -38,16 +38,16 @@
 |[20. 추상 클래스보다는 인터페이스를 우선하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap4/item20.md)|이채영|2022.11.30|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/13)|
 |[21. 인터페이스는 구현하는 쪽을 생각해 설계하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap4/item21.md)|전현민|2022.11.30|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/11)|
 |[22. 인터페이스는 타입을 정의하는 용도로만 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap4/item22.md)|전현민|2022.11.30|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/12)|
-|23. 태그 달린 클래스보다는 클래스 계층구조를 활용하라||||
-|24. 멤버 클래스는 되도록 static으로 만들라||||
-|25. 톱레벨 클래스는 한 파일에 하나만 담으라||||
+|23. 태그 달린 클래스보다는 클래스 계층구조를 활용하라|황동현|2022.12.8||
+|24. 멤버 클래스는 되도록 static으로 만들라|황동현|2022.12.8||
+|25. 톱레벨 클래스는 한 파일에 하나만 담으라|전현민|2022.12.8||
 
 ### 5장. 제네릭
 |아이템|발표자|준비기한|관련이슈|
 |------|---|---|---|
-|26. 로 타입은 사용하지 말라||||
-|27. 비검사 경고를 제거하라||||
-|28. 배열보다는 리스트를 사용하라||||
+|26. 로 타입은 사용하지 말라|박예한|2022.12.8||
+|27. 비검사 경고를 제거하라|이채영|2022.12.8||
+|28. 배열보다는 리스트를 사용하라|이채영|2022.12.8||
 |29. 이왕이면 제네릭 타입으로 만들라||||
 |30. 이왕이면 제네릭 메서드로 만들라||||
 |31. 한정적 와일드카드를 사용해 API 유연성을 높이라||||
