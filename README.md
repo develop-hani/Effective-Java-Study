@@ -46,8 +46,8 @@
 |아이템|발표자|준비기한|관련이슈|
 |------|---|---|---|
 |[26. 로 타입은 사용하지 말라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap5/item26.md)|박예한|2022.12.8|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/16)|
-|27. 비검사 경고를 제거하라|이채영|2022.12.8||
-|28. 배열보다는 리스트를 사용하라|이채영|2022.12.8|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/15)|
+|[27. 비검사 경고를 제거하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap5/item27.md)|이채영|2022.12.8||
+|[28. 배열보다는 리스트를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap5/item28.md)|이채영|2022.12.8|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/15)|
 |29. 이왕이면 제네릭 타입으로 만들라||||
 |30. 이왕이면 제네릭 메서드로 만들라||||
 |31. 한정적 와일드카드를 사용해 API 유연성을 높이라||||
