@@ -83,8 +83,11 @@ public class Stack<E> {
 }
 ```
 
-> Stack.java:8: generic array creation
-elements = new E[DEFAULT_INITIAL_CAPACITY];
+```
+Stack.java:8: generic array creation
+    elements = new E[DEFAULT_INITIAL_CAPACITY];
+                ^
+```
 
 이 단계에서 대체로 하나 이상의 경고나 오류가 뜨는데,아이템 28에서 설명한 것처럼 E와 같은 실체화 불가 타입으로는 배열을 만들 수 없다. 배열을 사용하는 코드를 제네릭으로 만들려 할 때는 이 문제가 항상 발목을 잡는다. 해결책으로 두 가지가 있다.
 
@@ -105,15 +108,20 @@ public Stack() {
 ### 해결책 2. elements필드의 타입을 E[]에서  Object[]로 바꿈
 
 이 경우 다른 에러가 발생한다.
-> Stack.java:19: incompatible types
+```
+Stack.java:19: warning: [unchecked] unchecked cast
 found: Object, required: E
         E result = elements[--size];
+                            ^
+```
         
 배열이 반환한 원소를 `E`로 형변환하면 오류 대신 경고가 뜬다.
->Stack.java:19: warning: [unchecked] unchecked cast
+```
+Stack.java:19: warning: [unchecked] unchecked cast
 found: Object, required: E
         E result = (E) elements[--size];
-    
+                                ^
+```   
 `E`는 실체화 불가 타입이므로 컴파일러는 런타임에 이루어지는 형변환이지만 안전한지 증명이 불가능하다. 이번에도 마찬가지로 직접 증명한 다음 경고를 숨길 수 있다.
 
 ``` java
