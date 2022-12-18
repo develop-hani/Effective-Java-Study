@@ -62,7 +62,7 @@ public static void main(String[] args) {
 이 코드가 만드는 배열은 Object[]를 반환한다.<br>
 attributes는 Object[] 하위 타입이 아니므로 형변환을 실패한다.
 
-- 예외 
+- varargs 매개변수 배열에 다른 메서드가 접근하도록 하용할 때에도 안전한 경우 
 1. @SafeVarargs 제대로 애노테이트된 또 다른 varargs 메서드에 넘기는 것
 2. 이 배열 내용의 일부 함수를 호출만 하는 일반 메서드에 넘기는 것
 
