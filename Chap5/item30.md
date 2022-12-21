@@ -82,6 +82,34 @@ public static <E> Set<E> union(Set<E> s1, Set<E> s2) {
 때때로 불변 객체를 여러 타입으로 활용할 수 있게 만들어야 할 때가 있다. 제네릭은 런타임에 타입 정보가 소거(아이템 28)되므로 하나의 객체를 어떤 타입으로든 매개변수화 할 수 있다. 하지만 이렇게 하려면 요청한 타입 매개변수에 맞게 매번 그 객체의 타입을 바꿔주는 정적 팩터리를 만들어야 한다. 이 패턴이 제네릭 싱글턴 팩터리이다.
 ex. `Collections.reverseOrder`(아이템42), `Collections.emptySet`
 
+제네릭 싱글턴 팩터리 : 제네릭으로 타입설정 가능한 인스턴스 만들어두고, 반환 시에 제네릭으로 받은 타입을 이용해 타입을 결정
+
+``` java
+public class GenericFactoryMethod {
+public static final Set EMPTY_SET = new HashSet();
+
+    public static final <T> Set<T> emptySet() {
+        return (Set<T>) EMPTY_SET;
+    }
+}
+'''
+'''java
+@Test
+public void genericTest() {
+    Set<String> set = GenericFactoryMethod.emptySet();
+    Set<Integer> set2 = GenericFactoryMethod.emptySet();
+    Set<Elvis> set3 = GenericFactoryMethod.emptySet();
+
+    set.add("ab");
+    set2.add(123);
+    set3.add(Elvis.INSTANCE);
+
+    String s = set.toString();
+    System.out.println("s = " + s);
+}
+```
+> s = [ab, item3.Elvis@3439f68d, 123]
+
 항등함수 객체는 상태가 없으니 요청할 때마다 새로 생성하는 것이 낭비다. 
 
 ``` java
@@ -113,6 +141,7 @@ public static void main(String[] args) {
         }
 }
 ```
+
 
 #### 3. 재귀적 타입 한정 : 타입 매개변수의 허용 범위를 한정
 
