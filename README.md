@@ -48,17 +48,17 @@
 |[26. 로 타입은 사용하지 말라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap5/item26.md)|박예한|2022.12.8|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/16)|
 |[27. 비검사 경고를 제거하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap5/item27.md)|이채영|2022.12.8||
 |[28. 배열보다는 리스트를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap5/item28.md)|이채영|2022.12.8|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/15)|
-|[29. 이왕이면 제네릭 타입으로 만들라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/43286e9fdb6b7c1fb2a7d4484f49605868766823/Chap5/item29.md)|이채영|2022.12.18|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/18)|
-|[30. 이왕이면 제네릭 메서드로 만들라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/43286e9fdb6b7c1fb2a7d4484f49605868766823/Chap5/item30.md)|이채영|2022.12.18|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/19)|
-|31. 한정적 와일드카드를 사용해 API 유연성을 높이라|전현민|2022.12.18||
-|32. 제네릭과 가변인수를 함께 쓸 때는 신중하라|전현민|2022.12.18||
-|33. 타입 안전 이종 컨테이너를 고려하라|박예한|2022.12.18|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/20)|
+|[29. 이왕이면 제네릭 타입으로 만들라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/43286e9fdb6b7c1fb2a7d4484f49605868766823/Chap5/item29.md)|이채영|2022.12.22|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/18)|
+|[30. 이왕이면 제네릭 메서드로 만들라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/43286e9fdb6b7c1fb2a7d4484f49605868766823/Chap5/item30.md)|이채영|2022.12.22|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/19)|
+|[31. 한정적 와일드카드를 사용해 API 유연성을 높이라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap5/item31.md)|전현민|2022.12.22||
+|[32. 제네릭과 가변인수를 함께 쓸 때는 신중하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap5/item32.md)|전현민|2022.12.22||
+|[33. 타입 안전 이종 컨테이너를 고려하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap5/item33.md)|박예한|2022.12.22|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/20)|
 
 ### 6장. 열거 타입과 애너테이션
 |아이템|발표자|준비기한|관련이슈|
 |------|---|---|---|
-|[34. int 상수 대신 열거 타입을 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap6/item34.md)|황동현|2022.12.18||
-|[35. ordinal 메서드 대신 인스턴스 필드를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap6/item35.md)|황동현|2022.12.18||
+|[34. int 상수 대신 열거 타입을 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap6/item34.md)|황동현|2022.12.22||
+|[35. ordinal 메서드 대신 인스턴스 필드를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap6/item35.md)|황동현|2022.12.22||
 |36. 비트 필드 대신 EnumSet을 사용하라||||
 |37. ordinal 인덱싱 대신 EnumMap을 사용하라||||
 |38. 확장할 수 있는 열거 타입이 필요하면 인터페이스를 사용하라||||
