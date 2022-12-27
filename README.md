@@ -59,12 +59,12 @@
 |------|---|---|---|
 |[34. int 상수 대신 열거 타입을 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap6/item34.md)|황동현|2022.12.22||
 |[35. ordinal 메서드 대신 인스턴스 필드를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap6/item35.md)|황동현|2022.12.22||
-|36. 비트 필드 대신 EnumSet을 사용하라||||
-|37. ordinal 인덱싱 대신 EnumMap을 사용하라||||
-|38. 확장할 수 있는 열거 타입이 필요하면 인터페이스를 사용하라||||
-|39. 명명 패턴보다 애너테이션을 사용하라||||
-|40. @Override 애너테이션을 일관되게 사용하라||||
-|41. 정의하려는 것이 타입이라면 마커 인터페이스를 사용하라||||
+|[36. 비트 필드 대신 EnumSet을 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap6/item36.md)|전현민|2022.12.28||
+|37. ordinal 인덱싱 대신 EnumMap을 사용하라|전현민|2022.12.28|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/21)|
+|38. 확장할 수 있는 열거 타입이 필요하면 인터페이스를 사용하라|황동현|2022.12.28||
+|39. 명명 패턴보다 애너테이션을 사용하라|이채영|2022.12.28||
+|40. @Override 애너테이션을 일관되게 사용하라|박예한|2022.12.28||
+|41. 정의하려는 것이 타입이라면 마커 인터페이스를 사용하라|박예한|2022.12.28||
 
 ### 7장. 람다와 스트림
 |아이템|발표자|준비기한|관련이슈|
