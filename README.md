@@ -75,7 +75,7 @@
 |[45. 스트림은 주의해서 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap7/item45.md)|이채영|2023.1.6||
 |[46. 스트림에서는 부작용 없는 함수를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap7/item46.md)|전현민|2023.1.6||
 |[47. 반환 타입으로는 스트림보다 컬렉션이 낫다](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap7/item47.md)|전현민|2023.1.6||
-|[48. 스트림 병렬화는 주의해서 적용하라](https://github.com/pyh-dotcom/Effective-Java-Study/tree/main/Chap7)|황동현|2023.1.6||
+|[48. 스트림 병렬화는 주의해서 적용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap7/item48.md)|황동현|2023.1.6||
 
 ### 8장. 메서드
 |아이템|발표자|준비기한|관련이슈|
