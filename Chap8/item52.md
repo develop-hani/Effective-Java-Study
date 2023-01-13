@@ -91,13 +91,7 @@ ___
 ```
 컴파일타임 타입이 모두 `Wine`인 것에 무관하게 가장 하위에서 정의한 재정의 메서드가 실행되었다.
 
-### 다중정의가 혼란을 주는 상황을 피하는 방법
-
-### 1. 매개변수 수가 같은 다중정의는 만들지 말고, 메서드 이름을 다르게 지어주자
-
-안전하고 보수적으로 가려면 매개변수 수가 같은 다중정의는 만들지 말자.
-가변인수를 사용하는 메서드라면 다중정의는 아예 하지 말아야 한다.(아이템53)
-이런 상황에서는 다중정의를 만들지 말고, 메서드 이름을 다르게 지어주자.
+## CollectionClassifier 해결
 
 ```java
 public class FixedCollectionClassifier {
@@ -120,7 +114,16 @@ public class FixedCollectionClassifier {
 ```
 위처럼 인자를 받아 instanceof로 검사를 하면 된다.
 
+## 다중정의가 혼란을 주는 상황을 피하는 방법
+
+### 1. 매개변수 수가 같은 다중정의는 만들지 말고, 메서드 이름을 다르게 지어주자
+
+안전하고 보수적으로 가려면 매개변수 수가 같은 다중정의는 만들지 말자.
+가변인수를 사용하는 메서드라면 다중정의는 아예 하지 말아야 한다.(아이템53)
+이런 상황에서는 다중정의를 만들지 말고, 메서드 이름을 다르게 지어주자.
+
 다중정의를 피하기 위해 이름을 다르게 지어주는 예제로는 ObjectInputStream의 read 메서드를 보면 된다.
+`readBoolean(), readInt(), readLong()`
 
 ### 2. 생성자의 경우, 정적 팩터리를 사용하거나 근본적으로 다른 타입을 사용하자
 
@@ -174,7 +177,16 @@ ___
 `[-3, -2, -1] [-3, -2, -1]`
 
 람다와 메소드 참조도 다중정의에 혼란을 이르켰다. 아래 코드를 보자.
+```
+//1번. Tread의 생성자 호출
+//문제 없음
+new Tread(System.out::println).start();
 
+//2번. ExecutorService의 submit 메서드 호출
+//컴파일 오류
+ExecutorService exec = Executors.newCachedTreadPool();
+exec.submit(System.out::println);
+```
 ``` java
 public class Lamda {
     public static void main(String[] args) {
