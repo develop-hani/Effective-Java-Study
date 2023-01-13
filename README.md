@@ -70,7 +70,7 @@
 |아이템|발표자|준비기한|관련이슈|
 |------|---|---|---|
 |[42. 익명 클래스보다는 람다를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap7/item42.md)|박예한|2023.1.6|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/23)|
-|[43. 람다보다는 메서드 참조를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap7/item43.md)|박예한|2023.1.6||
+|[43. 람다보다는 메서드 참조를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap7/item43.md)|박예한|2023.1.6|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/24)|
 |[44. 표준 함수형 인터페이스를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap7/item44.md)|이채영|2023.1.6||
 |[45. 스트림은 주의해서 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap7/item45.md)|이채영|2023.1.6||
 |[46. 스트림에서는 부작용 없는 함수를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap7/item46.md)|전현민|2023.1.6||
@@ -84,8 +84,8 @@
 |50. 적시에 방어적 복사본을 만들라|박예한|2023.1.13||
 |51. 메서드 시그니처를 신중히 설계하라|이채영|2023.1.13||
 |52. 다중정의는 신중히 사용하라|이채영|2023.1.13||
-|53. 가변인수는 신중히 사용하라|전현민|2023.1.13||
-|54. null이 아닌, 빈 컬렉션이나 배열을 반환하라|전현민|2023.1.13||
+|[53. 가변인수는 신중히 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap8/item53.md)|전현민|2023.1.13||
+|[54. null이 아닌, 빈 컬렉션이나 배열을 반환하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap8/item54.md)|전현민|2023.1.13||
 |[55. 옵셔널 반환은 신중히 하라](https://github.com/pyh-dotcom/Effective-Java-Study/tree/main/Chap8/item55.md)|황동현|2023.1.13||
 |[56. 공개된 API 요소에는 항상 문서화 주석을 작성하라](https://github.com/pyh-dotcom/Effective-Java-Study/tree/main/Chap8/item56.md)|황동현|2023.1.13||
 
