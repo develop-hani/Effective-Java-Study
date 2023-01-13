@@ -82,8 +82,8 @@
 |------|---|---|---|
 |49. 매개변수가 유효한지 검사하라|박예한|2023.1.13||
 |50. 적시에 방어적 복사본을 만들라|박예한|2023.1.13||
-|51. 메서드 시그니처를 신중히 설계하라|이채영|2023.1.13||
-|52. 다중정의는 신중히 사용하라|이채영|2023.1.13||
+|[51. 메서드 시그니처를 신중히 설계하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap8/item51.md)|이채영|2023.1.13||
+|[52. 다중정의는 신중히 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap8/item52.md)|이채영|2023.1.13||
 |[53. 가변인수는 신중히 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap8/item53.md)|전현민|2023.1.13||
 |[54. null이 아닌, 빈 컬렉션이나 배열을 반환하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap8/item54.md)|전현민|2023.1.13||
 |[55. 옵셔널 반환은 신중히 하라](https://github.com/pyh-dotcom/Effective-Java-Study/tree/main/Chap8/item55.md)|황동현|2023.1.13||
