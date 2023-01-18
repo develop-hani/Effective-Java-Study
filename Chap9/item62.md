@@ -109,7 +109,7 @@ public final class ThreadLocal<T> {
     public T get();
 }
 ```
-이 코드는 `java.lang.TreadLocal`과 비슷하다.
+이 코드는 `java.lang.ThreadLocal`과 비슷하다.
 
 ___
 
