@@ -22,17 +22,17 @@ public static void main(String[] args) {
 >사탕 4개를 구입한 후 잔돈이 0달러 남기를 기대했지만 사탕 3개를 구입한 후 잔돈은 0.3999999999999999달러가 남는다. 
 
 -> 금융 계산에는 BigDemical, int 혹은 long을 사용해야 한다.
-## BigDemical, int, long
-- BigDemical의 경우 기본타입보다 쓰기 훨씬 불편하고 훨씬 느리다.
+## BigDecimal, int, long
+- BigDecimal의 경우 기본타입보다 쓰기 훨씬 불편하고 훨씬 느리다.
 - int, 혹은 long 타입을 쓸경우 다룰 수 있는 값의 크기가 제한되고, 소수점을 직접 관리해야한다.\
-아래는 각각 위의 사탕 코드를 BigDemical, int를 사용해 수정한 코드이다.
+아래는 각각 위의 사탕 코드를 BigDecimal, int를 사용해 수정한 코드이다.
 ```java
 public static void main(String[] args) {
-  final BigDemical TEN_CENTS = new BigDemical(".10");//계산시 부정확한 값이 사용되는걸 막기 위해 문자열을 받는 생성자를 사용
+  final BigDecimal TEN_CENTS = new BigDecimal(".10");//계산시 부정확한 값이 사용되는걸 막기 위해 문자열을 받는 생성자를 사용
   
   int itemsBought = 0;
-  BigDemical funds = new BigDemical("1.00");
-  for (BigDemical price = TEN_CENTS; 
+  BigDecimal funds = new BigDecimal("1.00");
+  for (BigDecimal price = TEN_CENTS; 
           funds.compareTo(price) >= 0;
           price = price.add(TEN_CENTS)) {
     funds = funds.subtract(price);
