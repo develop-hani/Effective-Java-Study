@@ -96,8 +96,8 @@
 |58. 전통적인 for 문보다는 for-each 문을 사용하라|전현민|2023.1.18||
 |[59. 라이브러리를 익히고 사용하라](https://github.com/bronzehyeon/effectiv_java/blob/main/item59.md)|황동현|2023.1.18||
 |[60. 정확한 답이 필요하다면 float와 double은 피하라](https://github.com/bronzehyeon/effectiv_java/blob/main/item60.md)|황동현|2023.1.18||
-|61. 박싱된 기본 타입보다는 기본 타입을 사용하라|이채영|2023.1.18||
-|62. 다른 타입이 적절하다면 문자열 사용을 피하라|이채영|2023.1.18||
+|[61. 박싱된 기본 타입보다는 기본 타입을 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item61.md)|이채영|2023.1.18||
+|[62. 다른 타입이 적절하다면 문자열 사용을 피하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item62.md)|이채영|2023.1.18||
 |63. 문자열 연결은 느리니 주의하라||||
 |64. 객체는 인터페이스를 사용해 참조하라||||
 |65. 리플렉션보다는 인터페이스를 사용하라||||
