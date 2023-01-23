@@ -100,8 +100,8 @@
 |[62. 다른 타입이 적절하다면 문자열 사용을 피하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item62.md)|이채영|2023.1.18||
 |[63. 문자열 연결은 느리니 주의하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item63.md)|황동현|2023.1.25||
 |[64. 객체는 인터페이스를 사용해 참조하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item64.md)|황동현|2023.1.25|[이슈링크](https://github.com/pyh-dotcom/Effective-Java-Study/issues/25)|
-|[65. 리플렉션보다는 인터페이스를 사용하라]((https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item65.md))|이채영|2023.1.25||
-|[66. 네이티브 메서드는 신중히 사용하라]((https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item66.md))|이채영|2023.1.25||
+|[65. 리플렉션보다는 인터페이스를 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item65.md)|이채영|2023.1.25||
+|[66. 네이티브 메서드는 신중히 사용하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item66.md)|이채영|2023.1.25||
 |[67. 최적화는 신중히 하라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item67.md)|전현민|2023.1.25||
 |[68. 일반적으로 통용되는 명명 규칙을 따르라](https://github.com/pyh-dotcom/Effective-Java-Study/blob/main/Chap9/item68.md)|전현민|2023.1.25||
 
