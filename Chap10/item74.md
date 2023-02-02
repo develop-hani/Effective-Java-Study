@@ -43,6 +43,20 @@ Exception이나 Throwable을 던진다고 선언하면 안된다.
 
 &rarr; 이것으로 검사, 비검사 구분한다.
 
+
+```java
+/**
+ *
+ * @return value
+ * @throws NullPointerException if parameter is null or empty  -> 비검사예외
+ * @throws IllegalAccessError if someone access  -> 검사예외
+ */
+public int getValue throws IllegalAccessError {
+    return value;
+}
+
+```
+
 --- 
 ## 비검사 예외 문서화가 불가능한 경우
 
