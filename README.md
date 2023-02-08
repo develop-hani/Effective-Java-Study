@@ -121,13 +121,13 @@
 ### 11장. 동시성
 |아이템|발표자|준비기한|관련이슈|
 |------|---|---|---|
-|[78. 공유 중인 가변 데이터는 동기화해 사용하라]()||||
-|[79. 과도한 동기화는 피하라]()||||
-|[80. 스레드보다는 실행자, 태스크, 스트림을 애용하라]()||||
-|[81. wait와 notify보다는 동시성 유틸리티를 애용하라]()||||
-|[82. 스레드 안전성 수준을 문서화하라]()||||
-|[83. 지연 초기화는 신중히 사용하라]()||||
-|[84. 프로그램의 동작을 스레드 스케줄러에 기대지 말라]()||||
+|[78. 공유 중인 가변 데이터는 동기화해 사용하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap11/item78.md)|이채영|2023.2.10||
+|[79. 과도한 동기화는 피하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap11/item79.md)|이채영|2023.2.10||
+|[80. 스레드보다는 실행자, 태스크, 스트림을 애용하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap11/item80.md)|황동현|2023.2.10||
+|[81. wait와 notify보다는 동시성 유틸리티를 애용하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap11/item81.md)|황동현|2023.2.10||
+|[82. 스레드 안전성 수준을 문서화하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap11/item82.md)|전현민|2023.2.10||
+|[83. 지연 초기화는 신중히 사용하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap11/item83.md)|전현민|2023.2.10||
+|[84. 프로그램의 동작을 스레드 스케줄러에 기대지 말라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap11/item84.md)|전현민|2023.2.10||
 
 ### 12장. 
 |아이템|발표자|준비기한|관련이슈|
