@@ -129,12 +129,12 @@
 |[83. 지연 초기화는 신중히 사용하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap11/item83.md)|전현민|2023.2.10||
 |[84. 프로그램의 동작을 스레드 스케줄러에 기대지 말라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap11/item84.md)|전현민|2023.2.10||
 
-### 12장. 
+### 12장. 직렬화
 |아이템|발표자|준비기한|관련이슈|
 |------|---|---|---|
-|[85. 자바 직렬화의 대안을 찾으라]()||||
-|[86. Serializable을 구현할지는 신중히 결정하라]()||||
-|[87. 커스텀 직렬화 형태를 고려해보라]()||||
-|[88. readObject 메서드는 방어적으로 작성하라]()||||
-|[89. 인스턴스 수를 통제해야 한다면 readResolve보다는 열거 타입을 사용하라]()||||
-|[90. 직렬화된 인스턴스 대신 직렬화 프록시 사용을 검토하라]()||||
+|[85. 자바 직렬화의 대안을 찾으라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap12/item85.md)|황동현|2023.2.20||
+|[86. Serializable을 구현할지는 신중히 결정하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap12/item86.md)|황동현|2023.2.20||
+|[87. 커스텀 직렬화 형태를 고려해보라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap12/item87.md)|전현민|2023.2.20||
+|[88. readObject 메서드는 방어적으로 작성하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap12/item88.md)|전현민|2023.2.20||
+|[89. 인스턴스 수를 통제해야 한다면 readResolve보다는 열거 타입을 사용하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap12/item89.md)|이채영|2023.2.20||
+|[90. 직렬화된 인스턴스 대신 직렬화 프록시 사용을 검토하라](https://github.com/developer-hani/Effective-Java-Study/blob/main/Chap12/item90.md)|이채영|2023.2.20||
