@@ -122,7 +122,7 @@ public final class SringList implements Serializable {
 
 ### transient
 
-- transient로 선언해도 되는 필드는 모두 transien를 붙여야 한다.
+- transient로 선언해도 되는 필드는 모두 transient를 붙여야 한다.
 - 해당 객체의 논리적 상태오 무관한 필드라고 확신할 때만 transient 한정자를 생략해야 한다.
 - 기본 직렬화를 사용한다면 transient 필드들은 모두 기본값으로 초기화된다.<br>
 &rarr; 기본값을 사용하지 않으려면 readObject에서 원하는 값으로 복원해라.
